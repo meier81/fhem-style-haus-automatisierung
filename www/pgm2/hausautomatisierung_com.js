@@ -19,7 +19,7 @@ function getClock() {
 
 jQuery(document).ready(function ($) {
 
-    var themeVersion = '2.19';
+    var themeVersion = '2.20.0-dev1';
 
     // attr WEB hiddenroom input -> Ansicht anpassen
     if ($('#hdr .maininput').length == 0) {
@@ -81,12 +81,6 @@ jQuery(document).ready(function ($) {
     $('button.dist').wrapAll('<div class="icons"/>');
     $('button.dist').css({width: '50px', height: '50px', margin: '5px', padding: '0'});
     $('button.dist > *').css({maxWidth: '40px', maxHeight: '40px', display: 'block', margin: '0px auto'});
-
-    // Links in der Navigation hinzufügen
-    var navElement = jQuery('#menu .room').last().find('tbody');
-    navElement.append(
-        $('<tr><td><div><a class="custom-menu-entry" href="https://github.com/klein0r/fhem-style-haus-automatisierung/issues/">Theme-Fehler melden (v' + themeVersion + ')</a></div></td></tr>')
-    );
 
     // Automatische Breite für HDR Input
     function resizeHeader() {
