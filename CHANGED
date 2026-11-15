@@ -1,4 +1,10 @@
 FHEM haus-automatisierung.com custom theme last changes:
+2026-11-15 - 2.20.0-dev1
+- Veralteten Link "Theme-Fehler melden" entfernt
+- Neues FHEMWEB-Aktionsmenue #moreCmds gestaltet (26px, top 10px)
+- SCSS-Quelle und fertiges CSS aktualisiert
+- Versionsanzeige auf 2.20.0-dev1 angehoben
+
 2021-03-10
 - Compass raus
 - Revert "added mobile preview image"
