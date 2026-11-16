@@ -14,13 +14,13 @@ Dieses Repository ist eine Weiterentwicklung des FHEM-Themes **haus-automatisier
 | [dev](https://github.com/meier81/fhem-style-haus-automatisierung/tree/dev) | Laufende Weiterentwicklung und Testversionen |
 | [version-3](https://github.com/meier81/fhem-style-haus-automatisierung/tree/version-3) | Historischer, experimenteller Entwicklungsstand des Originalprojekts als Referenz |
 
-**Aktueller DEV-Stand: 2.20.0-dev7 (noch nicht als stabile Version freigegeben).**
+**Aktueller DEV-Stand: 2.20.0-dev8 (noch nicht als stabile Version freigegeben).**
 
 Bisherige Änderungen:
 - Veralteten Link „Theme-Fehler melden“ aus der Oberfläche entfernt
 - FHEMWEB-Aktionsmenü `#moreCmds` gestaltet (26 px Höhe, 10 px Abstand nach oben)
 - SCSS-Quelle und generierte CSS-Datei aktualisiert
-- Versionsanzeige auf `2.20.0-dev7` angehoben
+- Versionsanzeige auf `2.20.0-dev8` angehoben
 - Inhaltsbereich nutzt die verfügbare Fensterbreite mit 20 px rechtem Rand; Eingabeleiste wird gleich breit (Test ausstehend)
 - Weißer Hintergrund für horizontal scrollbare Device-Tabellen ergänzt (Test ausstehend)
 - Eingabeleiste auf Inhaltsbreite begrenzt und Zeilenumbruch in Device-Tabellen ergänzt (Test ausstehend)
