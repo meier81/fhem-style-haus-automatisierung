@@ -1,100 +1,85 @@
-# FHEM Style: haus-automatisierung.com (v2)
+# FHEM Style: haus-automatisierung.com – Weiterentwicklung
 
-Mit diesem Style wird die FHEM-Oberfläche etwas anschaulicher - "Look and Feel" sind dabei an das Webdesign der Seite [haus-automatisierung.com](https://haus-automatisierung.com/) angelehnt.
+Dieses Repository ist eine Weiterentwicklung des FHEM-Themes **haus-automatisierung.com** von **Matthias Kleine (klein0r)**. Das Theme verändert die Darstellung der FHEM-Weboberfläche und orientiert sich am Design von [haus-automatisierung.com](https://haus-automatisierung.com/).
 
-## Installation
+- **Originalprojekt:** [klein0r/fhem-style-haus-automatisierung](https://github.com/klein0r/fhem-style-haus-automatisierung)
+- **Weiterentwicklung und Pflege:** [meier81](https://github.com/meier81/fhem-style-haus-automatisierung)
+- **Lizenz:** MIT (ursprünglicher Copyright-Hinweis bleibt erhalten)
 
-1. FHEM-Update-Kanal (stabile Version) hinzufügen (vorher bisherigen Theme-Update-Eintrag mit `update list` prüfen und mit `update delete <URL>` entfernen)
+## Entwicklungsstand
 
+| Branch | Bedeutung |
+| --- | --- |
+| [main](https://github.com/meier81/fhem-style-haus-automatisierung/tree/main) | Stabile, freigegebene Version; derzeit unveränderter Theme-Stand aus dem bisherigen `version-2`-Branch |
+| [dev](https://github.com/meier81/fhem-style-haus-automatisierung/tree/dev) | Laufende Weiterentwicklung und Testversionen |
+| [version-3](https://github.com/meier81/fhem-style-haus-automatisierung/tree/version-3) | Historischer, experimenteller Entwicklungsstand des Originalprojekts als Referenz |
+
+## Installation und Updates in FHEM
+
+Es darf **nur einer** der beiden Theme-Update-Kanäle gleichzeitig in FHEM eingetragen sein, weil beide dieselben Theme-Dateien aktualisieren.
+
+Zunächst die eingerichteten Update-Quellen prüfen:
+
+```text
+update list
 ```
+
+Falls noch der Update-Kanal des Originalprojekts eingetragen ist, diesen entfernen:
+
+```text
+update delete https://raw.githubusercontent.com/klein0r/fhem-style-haus-automatisierung/version-2/controls_ha_theme.txt
+```
+
+Falls bereits der jeweils andere Kanal dieser Weiterentwicklung eingetragen ist, diesen vor dem Wechsel ebenfalls mit `update delete <vollständige URL>` entfernen.
+
+### Stabile Version (main)
+
+```text
 update add https://raw.githubusercontent.com/meier81/fhem-style-haus-automatisierung/main/controls_ha_theme.txt
 update check ha_theme
 update all ha_theme
 ```
 
-2. Select Style -> hausautomatisierung_com
+Der erste `update check` kann beim Wechsel der Update-Quelle sämtliche Theme-Dateien als aktualisierbar anzeigen. Die Ausgabe vor dem Installieren prüfen.
 
-3. Ein paar Anpassungen am Web-Device:
+Für den jeweils anderen Kanal siehe die README im [dev-Branch](https://github.com/meier81/fhem-style-haus-automatisierung/tree/dev).
 
-```
+### Theme aktivieren
+
+In FHEM den Style `hausautomatisierung_com` auswählen und die Weboberfläche neu laden.
+
+Optionale Einstellungen für ein FHEMWEB-Device namens `WEB` (nur übernehmen, wenn sie zur eigenen Konfiguration passen):
+
+```text
 attr WEB JavaScripts codemirror/fhem_codemirror.js
 attr WEB codemirrorParam { "theme": "blackboard", "lineNumbers":true, "lineWrapping": true, "height": "auto", "autocomplete": true }
 attr WEB roomIcons Save.config:message_attention
 ```
 
-Einmal speichern und neu laden - fertig.
+## Entwicklung
 
-## Entwicklungsumgebung aufsetzen
+Die Styles sind in `sass/` organisiert; die von FHEM verwendeten CSS- und JavaScript-Dateien liegen unter `www/`. Änderungen an SCSS sollten mit den ausgelieferten CSS-Dateien synchron gehalten werden.
 
-**Bitte keine Pull-Requests für CSS-Dateien einreichen, diese werden per SASS generiert.**
+Repository für die lokale Entwicklung klonen:
 
-Der Style basiert auf [SASS](https://sass-lang.com/) / [Compass](http://compass-style.org/). So können die einzelnen Bereiche unterteilt werden und der Style wird viel übersichtlicher und leichter zu warten / erweitern.
-
-Du brauchst:
-
-- git [Doku](https://git-scm.com/book/de/v1/Los-geht%E2%80%99s-Git-installieren)
-- SASS [Doku](https://sass-lang.com/install)
-- Compass [Doku](http://compass-style.org/install/)
-
-Dann die aktuellen Dateien von GitHub holen (oder aus einem eigenen Fork):
-
-```
-cd /opt/fhem/
-git clone -b version-2 git@github.com:klein0r/fhem-style-haus-automatisierung.git
+```bash
+git clone -b main https://github.com/meier81/fhem-style-haus-automatisierung.git
 ```
 
-Dann ein paar Symlinks erstellen:
+Das vorhandene Skript `prepare_update.sh` erzeugt die FHEM-Control-Datei des jeweiligen Branches. Beim Erstellen neuer Releases müssen die Einträge (Dateigrößen und Zeitstempel) mit den tatsächlich ausgelieferten Dateien übereinstimmen.
 
-```
-ln -s /opt/fhem/fhem-style-haus-automatisierung/www/hausautomatisierung-com /opt/fhem/www/hausautomatisierung-com
-ln -s /opt/fhem/fhem-style-haus-automatisierung/www/images/hausautomatisierung_com /opt/fhem/www/images/hausautomatisierung_com
-ln -s /opt/fhem/fhem-style-haus-automatisierung/www/pgm2/hausautomatisierung_comfloorplanstyle.css /opt/fhem/www/pgm2/hausautomatisierung_comfloorplanstyle.css
-ln -s /opt/fhem/fhem-style-haus-automatisierung/www/pgm2/hausautomatisierung_com.js /opt/fhem/www/pgm2/hausautomatisierung_com.js
-ln -s /opt/fhem/fhem-style-haus-automatisierung/www/pgm2/hausautomatisierung_comstyle.css /opt/fhem/www/pgm2/hausautomatisierung_comstyle.css
-ln -s /opt/fhem/fhem-style-haus-automatisierung/www/pgm2/hausautomatisierung_comsvg_style.css /opt/fhem/www/pgm2/hausautomatisierung_comsvg_style.css
-```
+## Fehler und Verbesserungsvorschläge
 
-SASS wartet auf Änderungen und baut bei Bedarf das CSS neu:
-
-```
-cd /opt/fhem/fhem-style-haus-automatisierung
-compass watch
-```
-
-Dann einfach die SCSS-Dateien bearbeiten.
-
-## Fehler melden
-
-Bitte [hier](https://github.com/klein0r/fhem-style-haus-automatisierung/issues) einen Issue erstellen
+Bitte Issues zur **Weiterentwicklung** in [diesem Repository](https://github.com/meier81/fhem-style-haus-automatisierung/issues) melden. Das Originalprojekt von klein0r bleibt davon unabhängig.
 
 ## Vorschau
 
-![FHEM Style](https://raw.githubusercontent.com/klein0r/fhem-style-haus-automatisierung/version-2/preview.png)
+![FHEM Style](https://raw.githubusercontent.com/meier81/fhem-style-haus-automatisierung/main/preview.png)
 
-## Smart-Home-Icons:
+## Credits und Lizenz
 
-Thanks @ https://dribbble.com/shots/2084609-Smart-House-Icon-Set-Free
+Ursprünglich entwickelt von **Matthias Kleine (klein0r)**. Weiterentwicklung durch **meier81**.
 
-## License
+Das Projekt steht unter der **MIT-Lizenz**. Der ursprüngliche Copyright-Hinweis und die Lizenzbedingungen bleiben unverändert; siehe [LICENSE](LICENSE).
 
-MIT License
-
-Copyright (c) 2021 Matthias Kleine
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Smart-Home-Icons: [Smart House Icon Set](https://dribbble.com/shots/2084609-Smart-House-Icon-Set-Free).
