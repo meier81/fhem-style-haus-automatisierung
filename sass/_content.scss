@@ -1,5 +1,6 @@
 #content {
-    max-width: $maxWidthContent;
+    // Use the available viewport width; the right edge is controlled by the layout.
+    max-width: none;
 
     .motd {
         background: $primary-color;
