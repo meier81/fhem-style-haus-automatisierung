@@ -322,9 +322,9 @@ svg:not([fill]):not(.jssvg) { fill: #676f7a; }
 #dashboard .ui-widget-content a, #dashboard .fhemlog, #dashboard #fwmenu li a { color: #e56524 !important; }
 #dashboard .ui-corner-all, #dashboard .ui-corner-top, #dashboard .ui-corner-right, #dashboard .ui-corner-left, #dashboard .ui-corner-bottom, #dashboard .ui-corner-bl, #dashboard .ui-corner-br, #dashboard .ui-corner-tl, #dashboard .ui-corner-tr { border-radius: 0 !important; border-bottom-right-radius: 0 !important; border-bottom-left-radius: 0 !important; border-top-right-radius: 0 !important; border-top-left-radius: 0 !important; }
 
-#right { max-width: 1000px; width: 100%; }
+#right { max-width: none; width: 100%; }
 #right > h3, #right > h4 { font-size: 20px; text-transform: uppercase; letter-spacing: 10px; margin-top: 10px; }
-#right > ul, #right > div, #right > div > ul, #right > p { color: #676f7a; background: #fff; border-collapse: collapse; border-left: 5px #e56524 solid; font-family: 'Source Code Pro', monospace !important; max-width: 995px; padding: 5px; width: 100%; }
+#right > ul, #right > div, #right > div > ul, #right > p { color: #676f7a; background: #fff; border-collapse: collapse; border-left: 5px #e56524 solid; font-family: 'Source Code Pro', monospace !important; max-width: none; box-sizing: border-box; padding: 5px; width: 100%; }
 #right > ul h3, #right > div h3, #right > div > ul h3, #right > p h3 { font-size: 16px; letter-spacing: 10px; text-transform: uppercase; font-weight: bold; }
 #right > ul dd, #right > div dd, #right > div > ul dd, #right > p dd { margin-left: 50px; }
 #right > ul dt, #right > div dt, #right > div > ul dt, #right > p dt { margin-left: 25px; }
