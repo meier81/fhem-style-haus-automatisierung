@@ -333,7 +333,7 @@ svg:not([fill]):not(.jssvg) { fill: #676f7a; }
 #right > ul ul li, #right > div ul li, #right > div > ul ul li, #right > p ul li { margin: 10px 0; }
 #right > ul table td, #right > div table td, #right > div > ul table td, #right > p table td { padding: 5px; }
 
-/* FHEMWEB device action menu - 2.20.0-dev1 */
+/* FHEMWEB device action menu - 2.20.0-dev2 */
 #content select#moreCmds {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -350,11 +350,12 @@ svg:not([fill]):not(.jssvg) { fill: #676f7a; }
   font-size: 16px;
   line-height: 20px;
   min-width: 230px;
-  height: 26px;
+  /* Match adjacent .detLink: 20px line-height + 2x2px padding + 2x1px border. */
+  height: auto;
   position: relative;
   top: 10px;
   padding: 2px 34px 2px 10px;
-  box-sizing: border-box;
+  box-sizing: content-box;
   cursor: pointer;
   vertical-align: top;
 }
