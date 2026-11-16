@@ -1,4 +1,8 @@
 FHEM haus-automatisierung.com custom theme last changes:
+2026-11-16 - 2.20.0-dev9
+- Attribut-Hilfe #devSpecHelp: feste 985px-Grenze entfernt, volle Inhaltsbreite
+- Border-Box und Umbruch langer Textteile ergaenzt; Readings unveraendert
+
 2026-11-16 - 2.20.0-dev8
 - CodeMirror-Editor in Edit files auf volle Inhaltsbreite erweitert
 - Commandref-Breitenregeln fuer #right und Inhaltsbloecke gegen feste Vorgaben abgesichert
