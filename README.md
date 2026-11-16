@@ -4,12 +4,12 @@ Mit diesem Style wird die FHEM-Oberfläche etwas anschaulicher - "Look and Feel"
 
 ## Installation
 
-1. Hinzufügen des neuen Themes in Version 2
+1. FHEM-Update-Kanal (Entwicklungsversion) hinzufügen (vorher bisherigen Theme-Update-Eintrag mit `update list` prüfen und mit `update delete <URL>` entfernen)
 
 ```
-update add https://raw.githubusercontent.com/klein0r/fhem-style-haus-automatisierung/version-2/controls_ha_theme.txt
-update check ha_theme
-update all ha_theme
+update add https://raw.githubusercontent.com/meier81/fhem-style-haus-automatisierung/dev/controls_ha_theme_dev.txt
+update check ha_theme_dev
+update all ha_theme_dev
 ```
 
 2. Select Style -> hausautomatisierung_com
