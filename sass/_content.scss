@@ -589,7 +589,9 @@
     }
 
     .CodeMirror {
-        max-width: $maxWidthContent;
+        max-width: none;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     #edit {
