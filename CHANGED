@@ -1,4 +1,7 @@
 FHEM haus-automatisierung.com custom theme last changes:
+2026-11-16 - 2.20.0-dev2
+- Dropdown #moreCmds: Hoehe an benachbarte Aktionslinks angeglichen (ohne feste 26px), Zoom-Skalierung verbessert
+
 2026-11-15 - 2.20.0-dev1
 - Veralteten Link "Theme-Fehler melden" entfernt
 - Neues FHEMWEB-Aktionsmenue #moreCmds gestaltet (26px, top 10px)
