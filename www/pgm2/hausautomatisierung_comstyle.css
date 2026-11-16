@@ -99,7 +99,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; back
 #content .makeSelect + .makeTable { margin-top: 10px; }
 #content .makeSelect .slider { width: 250px; height: 22px; margin-left: 5px; margin-right: 5px; }
 #content .makeSelect .slider .handle { height: 22px; line-height: 22px; }
-#content table { width: 100%; border-collapse: collapse; max-width: 1000px; }
+#content table { width: 100%; border-collapse: collapse; max-width: none; }
 #content table th { font-weight: bold; color: #676f7a; padding: 10px 2px; border-bottom: 1px #676f7a solid; }
 #content table.roomoverview { margin-bottom: 20px; }
 #content table.wide, #content table.roomoverview { width: 100%; }
