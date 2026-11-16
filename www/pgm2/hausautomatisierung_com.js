@@ -19,7 +19,7 @@ function getClock() {
 
 jQuery(document).ready(function ($) {
 
-    var themeVersion = '2.20.0-dev2';
+    var themeVersion = '2.20.0-dev3';
 
     // attr WEB hiddenroom input -> Ansicht anpassen
     if ($('#hdr .maininput').length == 0) {
@@ -86,7 +86,8 @@ jQuery(document).ready(function ($) {
     function resizeHeader() {
         var baseWidth = $('#content').length ? $('#content').width() : $(window).width() - $('#menuScrollArea').width() - 30;
 
-        $('#hdr').css({width: baseWidth + 'px'});
+        // #content is limited to 1000px; #hdr also has 20px horizontal padding.
+        $('#hdr').css({width: Math.max(0, Math.min(baseWidth, 980)) + 'px'});
         $('.maininput').css({width: ($('#hdr').width() - $('.maininputPopupLink').outerWidth() - 4) + 'px'});
     }
     resizeHeader();
