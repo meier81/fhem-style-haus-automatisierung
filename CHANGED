@@ -1,4 +1,8 @@
 FHEM haus-automatisierung.com custom theme last changes:
+2026-11-16 - 2.20.0-dev4
+- Weisser Hintergrund fuer horizontal scrollbare Device-Tabellen ergaenzt
+- Bestehende Tabellenbreiten und Umbruchregeln unveraendert
+
 2026-11-16 - 2.20.0-dev3
 - Eingabeleiste auf maximal 1000px Gesamtbreite begrenzt
 - Device-Tabellen: lange Werte umbrechen statt horizontales Ueberlaufen
