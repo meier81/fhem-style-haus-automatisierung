@@ -368,6 +368,18 @@
             background: $odd-color;
         }
 
+        // Device detail tables: keep long values visible without widening the page.
+        &.internals, &.attributes, &.readings, &.assoc {
+            table-layout: fixed;
+            width: 100%;
+
+            td {
+                overflow-wrap: anywhere;
+                word-break: normal;
+                white-space: normal;
+            }
+        }
+
         &.internals td:nth-child(1),
         &.attributes td:nth-child(1),
         &.readings td:nth-child(1),
