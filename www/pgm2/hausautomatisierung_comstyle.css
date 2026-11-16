@@ -34,13 +34,13 @@ button.dist { border: 0; cursor: pointer; margin: 10px; }
 #logo .theme-version { opacity: 0.7; font-weight: bold; }
 #logo #clock { opacity: 0.7; position: absolute; font-weight: bold; right: 0; top: 0; }
 
-#content, #right { bottom: 20px; position: absolute; right: 10px; top: 50px; }
+#content, #right { bottom: 20px; position: absolute; right: 20px; top: 50px; }
 
 #content, #hdr, #right { left: 320px; }
 
 input[type="text"] { border: 1px #e56524 solid; background: none; }
 
-#hdr { left: 310px; position: fixed; top: 0px; background: #fffffff0; padding: 10px; z-index: 99; border-radius: 0 0 4px 4px; box-shadow: 0 3px 3px #11111130; }
+#hdr { left: 320px; right: 20px; box-sizing: border-box; position: fixed; top: 0px; background: #fffffff0; padding: 10px; z-index: 99; border-radius: 0 0 4px 4px; box-shadow: 0 3px 3px #11111130; }
 #hdr .header { display: inline-block; }
 #hdr input.maininput { color: #e56524; font-size: 16px; box-sizing: border-box; }
 #hdr input.maininput:focus { outline: none; }
@@ -55,7 +55,7 @@ embed { margin-bottom: 10px; }
 
 select { -webkit-appearance: none; -moz-appearance: none; appearance: none; background-color: transparent; }
 
-#content { max-width: 1000px; }
+#content { max-width: none; }
 #content .motd { background: #e56524; border-bottom: 3px #fff solid; border-top: 3px #fff solid; color: #fff; font-size: 16px !important; font-weight: 700; padding: 10px; margin-top: 20px; }
 #content .motd:before { content: 'MOTD: '; }
 #content .motd a { color: #1d3d5f; }
