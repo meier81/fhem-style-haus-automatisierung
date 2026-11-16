@@ -1,4 +1,8 @@
 FHEM haus-automatisierung.com custom theme last changes:
+2026-11-16 - 2.20.0-dev6
+- Globale 1000px-Begrenzung fuer Tabellen im Inhaltsbereich entfernt (CSS und SCSS)
+- Spezielle Breitenbegrenzungen fuer Editoren und Dialoge unveraendert
+
 2026-11-16 - 2.20.0-dev5
 - 1000px-Inhaltsbegrenzung entfernt; rechter Rand 20px wie linker Menueabstand
 - Eingabeleiste an volle Breite des Inhaltsbereichs angepasst
