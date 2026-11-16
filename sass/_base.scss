@@ -67,7 +67,7 @@ button.dist {
 #content, #right {
     bottom: 20px;
     position: absolute;
-    right: 10px;
+    right: 20px;
     top: 50px;
 }
 
@@ -81,7 +81,9 @@ input[type="text"] {
 }
 
 #hdr {
-    left: 310px;
+    left: 320px;
+    right: 20px;
+    box-sizing: border-box;
     position: fixed;
     top: 0px;
     background: #fffffff0;
