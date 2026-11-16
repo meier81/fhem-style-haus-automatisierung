@@ -148,7 +148,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; back
 #content #devSpecHelp ul li { margin: 10px 0; }
 #content #devSpecHelp table td { padding: 5px; }
 #content div.img { width: 100%; background: #fff; padding: 5px; box-sizing: border-box; text-align: center; margin-top: 10px; margin-bottom: 10px; }
-#content .CodeMirror { max-width: 1000px; }
+#content .CodeMirror { max-width: none; width: 100%; box-sizing: border-box; }
 #content #edit input[type="submit"].psc { border: 1px #e56524 solid; border-radius: 0; color: #e56524; padding: 1px 10px; background: transparent; font-size: 16px; margin: 10px; min-width: 200px; }
 #content div.fileList { font-size: 16px !important; text-transform: uppercase; letter-spacing: 10px; }
 #content > form { margin-top: 10px; background: #fff; color: #676f7a; border-left: 5px #e56524 solid; border-right: 5px #e56524 solid; box-sizing: border-box; padding: 5px; }
@@ -322,9 +322,9 @@ svg:not([fill]):not(.jssvg) { fill: #676f7a; }
 #dashboard .ui-widget-content a, #dashboard .fhemlog, #dashboard #fwmenu li a { color: #e56524 !important; }
 #dashboard .ui-corner-all, #dashboard .ui-corner-top, #dashboard .ui-corner-right, #dashboard .ui-corner-left, #dashboard .ui-corner-bottom, #dashboard .ui-corner-bl, #dashboard .ui-corner-br, #dashboard .ui-corner-tl, #dashboard .ui-corner-tr { border-radius: 0 !important; border-bottom-right-radius: 0 !important; border-bottom-left-radius: 0 !important; border-top-right-radius: 0 !important; border-top-left-radius: 0 !important; }
 
-#right { max-width: none; width: 100%; }
+#right { max-width: none !important; width: auto !important; right: 20px !important; }
 #right > h3, #right > h4 { font-size: 20px; text-transform: uppercase; letter-spacing: 10px; margin-top: 10px; }
-#right > ul, #right > div, #right > div > ul, #right > p { color: #676f7a; background: #fff; border-collapse: collapse; border-left: 5px #e56524 solid; font-family: 'Source Code Pro', monospace !important; max-width: none; box-sizing: border-box; padding: 5px; width: 100%; }
+#right > ul, #right > div, #right > div > ul, #right > p { color: #676f7a; background: #fff; border-collapse: collapse; border-left: 5px #e56524 solid; font-family: 'Source Code Pro', monospace !important; max-width: none !important; box-sizing: border-box; padding: 5px; width: 100%; }
 #right > ul h3, #right > div h3, #right > div > ul h3, #right > p h3 { font-size: 16px; letter-spacing: 10px; text-transform: uppercase; font-weight: bold; }
 #right > ul dd, #right > div dd, #right > div > ul dd, #right > p dd { margin-left: 50px; }
 #right > ul dt, #right > div dt, #right > div > ul dt, #right > p dt { margin-left: 25px; }
