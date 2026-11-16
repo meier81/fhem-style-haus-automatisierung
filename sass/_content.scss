@@ -472,7 +472,7 @@
         }
     }
 
-    // FHEMWEB device action menu - 2.20.0-dev1
+    // FHEMWEB device action menu - 2.20.0-dev2
     select#moreCmds {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -489,11 +489,12 @@
   font-size: $large-fontsize;
   line-height: 20px;
   min-width: 230px;
-  height: 26px;
+  // Match adjacent .detLink sizing, avoiding fixed-height zoom rounding.
+  height: auto;
   position: relative;
   top: 10px;
   padding: 2px 34px 2px 10px;
-  box-sizing: border-box;
+  box-sizing: content-box;
   cursor: pointer;
   vertical-align: top;
         option {
