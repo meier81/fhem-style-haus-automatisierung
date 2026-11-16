@@ -19,7 +19,7 @@ function getClock() {
 
 jQuery(document).ready(function ($) {
 
-    var themeVersion = '2.20.0-dev7';
+    var themeVersion = '2.20.0-dev8';
 
     // attr WEB hiddenroom input -> Ansicht anpassen
     if ($('#hdr .maininput').length == 0) {
