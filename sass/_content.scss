@@ -527,7 +527,9 @@
         color: $secondary-color;
         font-size: $default-fontsize !important;
         font-family: 'Source Code Pro', monospace !important;
-        max-width: 985px;
+        max-width: none;
+        box-sizing: border-box;
+        overflow-wrap: anywhere;
         padding: 5px;
         width: 100%;
         margin-top: 10px;
