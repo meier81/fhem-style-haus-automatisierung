@@ -68,7 +68,7 @@ select { -webkit-appearance: none; -moz-appearance: none; appearance: none; back
 #content .roomoverview .icon { margin-right: 5px; vertical-align: middle; }
 #content .roomoverview td.first-table-column { width: 25%; border-right: 2px #e56524 solid; line-height: 29px; }
 #content .modCmdinput[type="submit"] { border: 1px #e56524 solid; border-radius: 0; color: #e56524; padding: 1px 10px; background: transparent; font-size: 16px; }
-#content .makeTable { clear: left; display: inline; float: left; width: 100%; overflow-x: scroll; }
+#content .makeTable { clear: left; display: inline; float: left; width: 100%; overflow-x: scroll; background: #fff; }
 #content .makeTable .mkTitle { font-size: 16px !important; text-transform: uppercase; letter-spacing: 10px; }
 #content .makeTable caption { text-transform: uppercase; font-size: 16px !important; letter-spacing: 10px; margin: 10px 0; }
 #content .makeTable .first-table-column { width: 25%; border-right: 2px #e56524 solid; }
