@@ -1,4 +1,9 @@
 FHEM haus-automatisierung.com custom theme last changes:
+2026-11-16 - 2.20.0-dev8
+- CodeMirror-Editor in Edit files auf volle Inhaltsbreite erweitert
+- Commandref-Breitenregeln fuer #right und Inhaltsbloecke gegen feste Vorgaben abgesichert
+- Basis-SCSS an bestehende 20px-Randabstaende angeglichen
+
 2026-11-16 - 2.20.0-dev7
 - Commandref (#right) und weisse Inhaltsbloecke ohne feste 1000px/995px-Breitenbegrenzung
 - Box-Sizing der Commandref-Bloecke auf border-box gesetzt; rechter 20px-Rand bleibt erhalten
