@@ -1,4 +1,9 @@
 FHEM haus-automatisierung.com custom theme last changes:
+2026-11-16 - 2.20.0-dev5
+- 1000px-Inhaltsbegrenzung entfernt; rechter Rand 20px wie linker Menueabstand
+- Eingabeleiste an volle Breite des Inhaltsbereichs angepasst
+- Breite Tabellen bleiben horizontal scrollbar
+
 2026-11-16 - 2.20.0-dev4
 - Weisser Hintergrund fuer horizontal scrollbare Device-Tabellen ergaenzt
 - Bestehende Tabellenbreiten und Umbruchregeln unveraendert
